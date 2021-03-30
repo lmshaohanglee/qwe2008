@@ -16,14 +16,22 @@
         //     return num1 - num2;
         // }
 
-        // 函数特殊用法
+        // // 函数特殊用法
+        // function fun1(){
+        //     function fun2(a,b){
+        //         console.log(a+b)
+        //     }
+        //     return fun2;
+        // }
+        // fun1()(55,44)
+        
+        // 使用arguments
         function fun1(){
-            function fun2(a,b){
-                console.log(a+b)
-            }
-            return fun2;
+            console.log(arguments);
+            return arguments[0]+arguments[1]
         }
-        fun1()(55,44)
+        var fun = fun1(11,22,33)
+        console.log(fun)
     </script>
 </body>
 </html>
