@@ -8,13 +8,22 @@
 <body>
     <script>
         // 函数声明提升
-        console.log(test1(55,44))
-        function test1(num1,num2){
-            return num1 + num2;
+        // console.log(test1(55,44))
+        // function test1(num1,num2){
+        //     return num1 + num2;
+        // }
+        // function test1(num1,num2){
+        //     return num1 - num2;
+        // }
+
+        // 函数特殊用法
+        function fun1(){
+            function fun2(a,b){
+                console.log(a+b)
+            }
+            return fun2;
         }
-        function test1(num1,num2){
-            return num1 - num2;
-        }
+        fun1()(55,44)
     </script>
 </body>
 </html>
