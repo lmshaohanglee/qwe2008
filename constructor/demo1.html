@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Animal(){
+
+        }
+        function Person(){
+
+        }
+        // 函数原型 prototype
+        console.log(Animal.prototype)
+        console.log(typeof Animal.prototype)
+        Animal.prototype.age = 11;
+        Animal.prototype.say = function(){
+            console.log("Hello Js")
+        }
+        var a1 = new Animal()
+        var a2 = new Animal()
+        a2.name='asd';
+        console.log(a1)
+        console.log(a2)
+        a1.say()
+    </script>
+</body>
+</html>
