@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str1 = "   Hello World   ";
+        console.log(str1.indexOf('o'));//indexOf 查看指定字符首次出现的位置
+        console.log(str1.lastIndexOf('o'));//lastIndexOf 查看指定字符最后出现的位置
+        console.log(str1.includes('q'))//includes 返回布尔值，查看字符串中是否存在指定字符，存在返回true 不存在返回false  区分大小写
+        console.log(str1.startsWith('He'))//startsWith 返回布尔值，查看字符串的头部是否为指定字符，是返回true，否返回false 区分大小写
+        console.log(str1.endsWith('d'));//endsWith 返回布尔值，查看字符串的尾部是否为指定字符，是返回true，否返回false 区分大小写
+        console.log(str1.repeat(5));//返回一个新字符串，表示将原字符串重复n次。
+        console.log(str1.padStart(31,'Shao Hang Lee '));//如果某个字符串不够指定长度，会在头部或尾部补全。padStart()用于头部补全，
+        console.log(str1.padEnd(31,' Shao Hang Lee'));//padEnd()用于尾部补全。
+        console.log(str1.trim());//消除字符串两端的空格
+        console.log(str1.trimStart());//消除字符串头部的空格
+        console.log(str1.trimEnd());//消除字符串尾部的空格
+    </script>
+</body>
+</html>
