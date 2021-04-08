@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+  
+<body>
+    原数组 ：<span></span><br>
+    处理数组： <b></b><br>
+    寒假倒计时：<div></div>
+    原字符串 ：<span id="str1"></span><br>
+    反转字符串 ：<span id="str2"></span><br>
+    协议: <span id="http"></span><br>
+    主机地址: <span id="host"></span><br>
+    路径：<span id="pathname"></span><br>
+    参数： <span id="search"></span><br>
+    锚点： <span id="hash"></span><br>
+    
+    </font>
+    <script>
+        //通过原型给数组添加一个去掉数组中重复的元素的方法
+        var arr = [11, 33, 44, 11, 66, 77, 44]
+        Array.prototype.method = function () {
+            for (var i = 0, len = arr.length; i < len; i++) {
+                for (var j = i + 1, len = arr.length; j < len; j++) {
+                    if (arr[i] === arr[j]) {
+                        arr.splice(j, 1);
+                        j--;      
+                        len--;         
+                    }
+                }
+            }
+            return arr
+        }
+        document.querySelector("span").innerText = arr
+        var el = Array.prototype.method()
+        document.querySelector("b").innerText = el
+
+
+
+        // 寒假倒计时
+        var showtime = function () {
+            var nowtime = new Date(),  //获取当前时间
+                endtime = new Date("2021/12/22");  //定义结束时间
+            var lefttime = endtime.getTime() - nowtime.getTime(),  //距离结束时间的毫秒数
+                leftd = Math.floor(lefttime / (1000 * 60 * 60 * 24)),  //计算天数
+                lefth = Math.floor(lefttime / (1000 * 60 * 60) % 24),  //计算小时数
+                leftm = Math.floor(lefttime / (1000 * 60) % 60),  //计算分钟数
+                lefts = Math.floor(lefttime / 1000 % 60);  //计算秒数
+            return leftd + "天" + lefth + "时" + leftm + "分" + lefts + "秒";  //返回倒计时的字符串
+        }
+        setInterval(function () {
+            _div = document.createElement("div")
+            document.body.appendChild(_div)
+            document.querySelector("div").innerHTML = showtime()
+        }, 1000);
+
+
+
+        // 反转字符串
+        var str = "abcdefg" 
+        Array.prototype.method2 = function () { 
+            var str1 = str.split('').reverse().join(''); 
+            return str1
+        }
+        document.getElementById("str1").innerHTML = str
+        let str1 =  Array.prototype.method2()
+        document.getElementById("str2").innerHTML = str1
+        
+         // 获取当前url参数
+        
+         var http = window.location.protocol //协议
+         var host = window.location.host //主机
+         var pathname = window.location //路径
+         var search = window.location.search //参数hash
+         var hash = window.location.hash //锚点
+         
+        function loca(id,val){
+           document.getElementById(id).innerHTML = val
+        }
+        loca('http',http);
+        loca('host',host);
+        loca('pathname',pathname);
+        loca('search',search);
+        loca('hash',hash);
+  
+        // 封装一个函数用来生成随机数,随机数范围0-10000： mtrand(0,10000)
+        var rdom = Math.ceil(Math.random()*10000); 
+
+         
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person = {
+            name : 'lishaohang',
+            age : 22,
+            aa : 11
+        }
+        // 向对象添加属性
+        person.email = "906206589@qq.com";
+        // 通过Object.defineProperty()添加属性
+        Object.defineProperty(person,'sex',{
+            value : '男',
+        })
+        // 删除一个属性
+        delete person.aa;
+        // 检测属性是否在对象中
+        console.log('name' in person)   //true
+        console.log('bb' in person)    //false
+        // 枚举属性
+        for(k in person){
+            console.log(k)
+        }   
+        console.log(person)
+    </script>
+</body>
+</html>

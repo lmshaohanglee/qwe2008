@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let name = "lishaohang";
+        // let age = 24;
+        // let say = ()=> {return "Hello ES6"};
+        // //对象中直接使用变量
+        // let obj1 = {name,age,say}
+        // console.log(obj1.say())
+
+        // let obj0 = {
+        //     say: function(){
+        //         console.log(222)
+        //     }
+        // }
+        // obj0.say()
+        // // 简写
+        // let obj1 = {
+        //     say(){
+        //         console.log(111)
+        //     }
+        // }
+        // obj1.say()
+
+        // class Person{
+        //     constructor(name,age){
+        //         this.name = name
+        //         this.age = age
+        //     }
+        //     say(){
+        //         console.log(this.name,this.age)
+        //     }
+        // }
+        // let p1 = new Person('wang','22')
+        // console.log(p1)
+
+        class Person{
+            constructor(name,age){
+                this.name = name
+                this.age = age
+            }
+            get name(){
+                console.log(1111)
+            }
+            set name(value){
+                console.log(value)
+            }
+        }
+        let p1 = new Person('wang','22')
+        console.log(p1)
+        
+    </script>
+</body>
+</html>

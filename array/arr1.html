@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr1 = [11,33,44,11,66,77,44];
+        function uniq(){
+            
+        }
+        uniq.prototype.uniq1=function(){
+            for(var i=0;i<arr1.length;i++){
+                for(var j=i+1;j<arr1.length;j++){
+                    if(arr1[i]==arr1[j]){
+                        arr1.splice(j,1)
+                        j--
+                    }
+                }
+            }
+            return arr1;
+        }
+        //console.log(arr1)
+        let arr2 = new uniq();
+        console.log(arr2.uniq1())
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = 'abcd';
+        function reverse(v){
+            v.reverse()
+        }
+        reverse.prototype.reverse1= reverse()
+        
+        str1= new reverse();
+        reverse(str)
+        console.log(str.reverse())
+
+        //console.log(str.reverse1())
+    </script>
+</body>
+</html>

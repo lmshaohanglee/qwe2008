@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 对象赋值
+        let json_obj = {
+            name: "zhangsan",
+            age: 22,
+            email: "zhangsan@qq.com"
+        }
+        // 使用与对象属性名一致的变量名
+        let {name,age,email} = json_obj;
+        console.log(name,age,email);
+        // 使用别名
+        let {name:n,age:a,email:e} = json_obj;
+        console.log(n,a,e);
+    </script>
+</body>
+</html>

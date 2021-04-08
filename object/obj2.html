@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let name = "lishaohang";
+        // let age = 24;
+        // let say = () => {return "Hello ES6"};
+        // // 大括号内直接写变量名
+        // let obj1 = {name,age,say};
+        // console.log(obj1)
+
+        // let obj2 = {
+        //     name: "lishaohang",
+        //     // es6之前
+        //     say:function(){
+        //         console.log(1111)
+        //     },
+        //     // es6简写
+        //     say2(){
+        //         console.log(222)
+        //     }
+        // }
+        // obj2.say();
+        // obj2.say2();
+
+
+        // let obj = {
+        //     age: 24,
+        //     ["q"+"d"]: "asd",
+        // }
+        // obj["hel"+"lo"] = "hello world"
+        // obj.foo = true;
+        // obj.name = "lishaohang"
+        // obj['a'+2+'c'] = "abc"
+        // console.log(obj)
+
+        // let obj = {
+        //     ['hel'+'lo'](){
+        //         return "hello wrold"
+        //     }
+        // }
+        // console.log(obj.hello)
+
+        // class Person{
+        //     name='qwe'
+        //     age=24
+        // }
+        // let p1= new Person();
+        // console.log(p1)
+
+        function Person1(){
+            
+        }
+        Person1.prototype.name='noname';
+        Person1.prototype.sex='男';
+        Person1.prototype.say = function(){
+            console.log('hello world')
+        }
+        let p1 = new Person1();
+        console.log(p1)
+    </script>
+</body>
+</html>

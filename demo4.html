@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function log(x,y = 'Lee'){
+        //     console.log(x,y);
+        // }
+        // log('shaohang');
+        // function Point(x = 0,y = 0){
+        //     this.x = x;
+        //     this.y = y;
+        // }
+        // const p = new Point();
+        // console.log(p)
+        // function foo(x = 5){
+        //     let x = 1;  //报错
+        //     const x = 2;    //报错
+        // }
+        // function foo(x,x,y=5){  //报错
+
+        // }
+
+        // let x = 99;
+        // function foo(p = x+1){
+        //     console.log(p)
+        // }
+        // foo()
+        // x=199;
+        // foo()
+
+        // let s1 = Symbol('foo');
+        // let s2 = Symbol('foo');
+        // console.log(s1 === s2)
+
+        function fun(n,o){
+            console.log(o)
+            return{
+                fun:function(m){
+                    return fun(m,n)
+                }
+            }
+        }
+        var a = fun(0);a.fun(1);a.fun(2);a.fun(3)
+
+
+        
+    </script>
+</body>
+</html>
