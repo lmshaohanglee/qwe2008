@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person{
+            // constructor 构造方法 实例化对象时自动调用
+            constructor(name="noname",age=0){
+                this.name = name
+                this.age = age
+            }
+            get name(){
+                console.log('访问了name属性')
+            }
+            set name(v){
+                console.log('修改了name属性')
+            }
+        }
+        const p1 = new Person('zhangsan',11);
+        console.log(p1)
+        p1.name
+        p1.name = 'lisi'
+    </script>
+</body>
+</html>

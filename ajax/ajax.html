@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <script>
+        function ajax(url){
+            $.ajax({
+                url: url,    //要请求的接口地址
+                async: false,
+                type: 'get',   //请求方法  get、post
+                dataType: 'json',
+                success:function(d){     //请求成功之后的处理函数
+                    console.log(d)
+                }
+            })
+        }
+        ajax('http://vue.api.comcto.com/api/password1.php')
+        ajax('http://vue.api.comcto.com/api/password2.php')
+        ajax('http://vue.api.comcto.com/api/password3.php')
+        ajax('http://vue.api.comcto.com/api/password4.php')
+    </script>
+</body>
+</html>

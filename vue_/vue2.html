@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="checkbox" id="q" value="" v-model="checkedNames">
+        <input type="checkbox" id="" value="" v-model="checkedNames">
+        <input type="checkbox" id="" value="" v-model="checkedNames">
+        <span>Checked names:{{ checkedNames }}</span>
+    </div>
+    
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                checkedNames :[]
+            }
+        })
+    </script>
+</body>
+</html>

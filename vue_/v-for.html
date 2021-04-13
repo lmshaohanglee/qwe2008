@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.v2.6.12.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <!-- item为值，index为下标 -->
+            <li v-for='item,index in items'>
+                {{index}} : {{ item.message }}
+            </li>
+        </ul>
+        <ul>
+            <!-- value为属性值，key为属性 -->
+            <li v-for='value,key in object'>
+                {{key}} : {{ value }}
+            </li>
+        </ul>
+    </div>
+    <script>
+        var app = new Vue({
+            el : '#app',
+            data : {
+                items : [
+                    {message : 'arr1'},
+                    {message : 'arr2'}
+                ],
+                object : {
+                    obj1 : 'hello Vue',
+                    obj2 : 'hello javascript',
+                    obj3 : 'hello es6'
+                }
+            }
+        })
+    </script>
+</body>
+</html>

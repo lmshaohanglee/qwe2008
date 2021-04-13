@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.v2.6.12.js"></script>
+</head>
+<body>
+    <div id="app">
+        <span v-show='display'>Hello Vue</span>
+    </div>
+    <script>
+        // 带有v-show的元素始终会被渲染并保留在Dom中。
+        // v-show只是简单的切换元素的css属性 display  ture显示  false隐藏 
+        var app = new Vue({
+            el : '#app',
+            data : {
+                display : false,  //为true的话span标签显示，为false则隐藏
+            }
+        })
+    </script>
+</body>
+</html>

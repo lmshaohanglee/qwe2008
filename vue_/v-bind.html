@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.v2.6.12.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 完整语句 -->
+        <a v-bind:href='url' v-bind:title='title'>百度</a>
+        <!-- 简写 -->
+        <a :href='url' :title='title'>百度</a>
+    </div>
+    <script>
+        //v-bind  绑定标签的属性，如src，title等，元素的属性在标签的内部。
+        // 创建vue的实例对象
+        var but = new Vue({
+            // el 用来指定vue挂载到页面中的元素，值是选择器
+            // 用来指定vue管理的html区域
+            el : '#app',
+            // 数据对象，用来给视图中提供数据的
+            data: {
+                url:'https://www.baidu.com/',
+                title:'百度'
+            }
+        })
+    </script>
+</body>
+</html>

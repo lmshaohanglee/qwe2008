@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 对象使用get与set方法
+        const p1 = {
+            name : 'lishaohang',
+            age : 24,
+        }
+        // Object.defineProperty 自定义属性
+        // 自定义属性的四个特征
+        // value：属性的值
+        // configurable：是否可被delete删除
+        // writable：是否可写
+        // enumerable：是否可枚举
+        Object.defineProperty(p1,'name',{ 
+            //自定义属性中有get和set是不能设置属性的四个特征，四个特征只能为默认
+            // name属性的get方法
+
+            // get方法：访问器  读属性时触发   取值函数
+            get(){
+                return 'xxx'
+            },
+            // set方法：修改器  写属性时触发    存值函数
+            set(v){
+                console.log('新值：',v)
+            }
+        })
+        console.log(p1)
+        console.loh(p1.name)
+        p1.name = 'lihang'
+    </script>
+</body>
+</html>

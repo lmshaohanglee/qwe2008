@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj1 = {
+            name : "zhangsan",
+            age : 11
+        }
+        const p1 = new Proxy(obj1,{
+            get(target,property){
+                //target  操作对象
+                //property  属性
+                if(property in target){
+                    console.log(`${property}属性存在`)
+                }else{
+                    console.log(`${property}属性不存在`)
+                }
+            },
+
+            // 拦截 defineproperty方法
+            defineProperty:function(target,key,descriptor){
+                console.log('禁止使用defineproperty方法')
+                return true
+            }
+            
+        });
+        p1.name
+        Object.defineProperty(p1,'xxx',{
+            value:'abcd'  
+        })
+    </script>
+</body>
+</html>

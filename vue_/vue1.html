@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.v2.6.12.js"></script>
+    <style>
+        #three {
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="qwe">
+        <input type="text" id="one" v-model='message'> +
+        <input type="text" id="two" v-model='message'>
+        <button>=</button>
+        <input type="text" id="three" v-model='message'>
+    </div>
+    <script>
+        var one = new Vue({
+            el: '#one',
+            data: {
+                message:''
+            }
+        })
+        var two = new Vue({
+            el: '#two',
+            data: {
+                message:''
+            }
+        })
+        
+        var dclick = document.querySelector('button');
+        dclick.onclick=function(){
+            var he =parseInt(one.message)+parseInt(two.message);
+            var three = new Vue({
+            el: '#three',
+            data: {
+                message:he
+            }
+        })
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.v2.6.12.js"></script>
+</head>
+<body>
+    <!-- <div id="app">
+        <input type="text" :value='value'>
+    </div>
+    <script>
+        document.querySelector('input').onblur=function(){
+            var upper = document.querySelector('input').value;
+            var upper = upper.toUpperCase()
+            var app = new Vue({
+                el : '#app',
+                data : {
+                    value : upper
+                }
+            })
+        console.log(upper)
+        }
+        
+    </script> -->
+
+    <div id="app">
+        <input type="text" :value='message | capitalize'>
+    </div>
+    <script>
+        var app = new Vue({
+            
+            filters: {
+                capitalize: function (value) {
+                    if (!value) return ''
+                    value = value.toString()
+                    return value.charAt(0).toUpperCase() + value.slice(1)
+                }
+            }
+        })
+        
+        
+    </script>
+</body>
+</html>

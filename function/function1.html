@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // es6之前
+        // let lee =function (a,b){
+        //     return a+b;
+        // }
+        // console.log(lee(22,24))
+        // // 箭头函数
+        // let lee1 = (a,b) => {
+        //     return a*b;
+        // }
+        // console.log(lee1(22,24))
+
+        // 1.箭头函数的this是静态的，this始终指向函数声明时所在作用域下的this的值
+        function getName(){
+            console.log(this.name);
+        }
+        let getName1 = () => {
+            console.log(this.name);
+        }
+        // 设置window对象的那么属性
+        window.name = 'lee';
+        const school = {
+            name : 'LeeShaoHang',
+        }
+        // // 直接调用  两个都显示lee
+        // getName();
+        // getName1();
+
+        // // call 方法调用  普通函数改变   箭头函数没有改变，因为this是静态的，无论用怎样的方式去调用，箭头函数this始终指向函数声明时所在作用域下的this的值
+        //  getName.call(school);
+        // getName1.call(school);
+
+        // // 2. 不能作为构造实例化对象  报错   
+        // let Person = (name,age) => {
+        //     this.name = name;
+        //     this.age = age;
+        // }
+        // let me = new Person('qwe',24);
+        // console.log(me)
+
+        // // 3 不能使用 arguments变量
+        // let fn = () => {
+        //     console.log(arguments)
+        // }
+        // fn(1,2,3)
+
+        // 4 箭头函数的简写
+            // // （1）当形参有且只有一个的时候 可以省略小括号
+            // let add = n => {
+            //     return n + n;
+            // }
+            // console.log(add(7))
+
+            // 当代码体只有一条语句的时候  可以省略大括号  省略大括号的话  return也必须省略掉
+            let pow = (n) => n*n;
+            console.log(pow(9));
+    </script>
+</body>
+</html>
